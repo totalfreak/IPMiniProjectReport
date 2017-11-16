@@ -1,8 +1,12 @@
 \chapter{Code}
     \begin{listing}[H]
-    	\caption{Getting real-time location done by updateLocationUI method}
-    	\label{listing:updateLocationUI}
+    	\caption{Horizontal and vertical kernels}
+    	\label{listing:kernels}
     	\begin{minted}[frame=lines, framesep=2mm,baselinestretch=1.1,fontsize=\footnotesize,linenos]{cpp}
-int shit = 0;
+//X sobel kernel
+int kernelX[3][3] = {1, 0, -1, 2, 0, -2, 1, 0, -1};
+
+//Y sobel kernel
+int kernelY[3][3] = {1, 2, 1, 0, 0, 0, -1, -2, -1};
     	\end{minted}
     \end{listing}

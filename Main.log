@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2017.11.16)  16 NOV 2017 20:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2017.11.16)  16 NOV 2017 20:55
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1746,14 +1746,14 @@ t line 3.
 \openout5 = `Main.pyg'.
 
 (./_minted-Main/default-pyg-prefix.pygstyle) (./_minted-Main/default.pygstyle)
-(./_minted-Main/114605B4435A6A16DC5B457F98BD483D16E60121E4D64E8F0EBAE25F72F33F0
+(./_minted-Main/C1AB9C630478F6A983EB9BC6E1043FDA16E60121E4D64E8F0EBAE25F72F33F0
 3.pygtex
 LaTeX Font Info:    Try loading font information for T1+lmtt on input line 1.
  (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <9> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 2.
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 3.
 ))
 
 AED: lastpage setting LastPage
@@ -1771,25 +1771,26 @@ runsystem(rm Main.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 26511 strings out of 494931
- 475383 string characters out of 6180850
- 700975 words of memory out of 5000000
- 29246 multiletter control sequences out of 15000+600000
- 47941 words of font info for 40 fonts, out of 8000000 for 9000
+ 26513 strings out of 494931
+ 475398 string characters out of 6180850
+ 701948 words of memory out of 5000000
+ 29247 multiletter control sequences out of 15000+600000
+ 48260 words of font info for 41 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 64i,13n,75p,873b,605s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 64i,13n,75p,873b,600s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texlive/texmf-dist
 /fonts/enc/dvips/base/8r.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb
 ></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/typ
 e1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/
 share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public
 /lm/lmtk10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt9.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on Main.pdf (4 pages, 1219426 bytes).
+xmf/fonts/type1/public/lm/lmtti10.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvet
+ic/uhvr8a.pfb>
+Output written on Main.pdf (4 pages, 1236181 bytes).
 PDF statistics:
- 97 PDF objects out of 1000 (max. 8388607)
- 77 compressed objects within 1 object stream
+ 101 PDF objects out of 1000 (max. 8388607)
+ 80 compressed objects within 1 object stream
  13 named destinations out of 1000 (max. 500000)
  47 words of extra memory for PDF output out of 10000 (max. 10000000)
 
