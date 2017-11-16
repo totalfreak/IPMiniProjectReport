@@ -1,0 +1,49 @@
+\documentclass[11pt,a4paper,oneside]{report}
+\input{include/settings/settings}
+
+
+\begin{document} 
+	
+% COVER PAGE, TITLE PAGE AND IMPRINT PAGE
+\pagenumbering{roman}					% Roman numbering (starting with i (one)) until first main chapter
+\input{include/frontmatter/Titlepage}
+
+
+\input{include/frontmatter/Abstract}
+% INDHOLDSFORTEGNELSE
+\tableofcontents
+ 
+\newpage
+
+\newpage
+\setcounter{page}{1} 					% Arabic page numering (starting at 1(one)) throughout the paper
+\pagenumbering{arabic}
+
+% INDLEDNING
+\input{include/Indledning}
+
+% ANALYSE
+\input{include/Analyse}
+
+% DESIGN
+%\input{include/Design}
+
+% IMPLEMENTION
+%\input{include/Implemention}
+
+% Evaluation
+%\input{include/Evaluation}
+
+% CONCLUSIONR
+%\input{include/backmatter/Konklusion}
+
+% LITTERATURLISTE
+%\addcontentsline{toc}{chapter}{Litteratur}
+%\input{include/backmatter/Litteraturliste}
+\bibliography{include/backmatter/bibliography}
+
+\begin{appendices}
+\input{include/Appendices}
+\end{appendices}
+
+\end{document}

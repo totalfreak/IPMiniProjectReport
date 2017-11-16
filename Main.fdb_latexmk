@@ -1,0 +1,21 @@
+# Fdb version 3
+["pdflatex"] 1507662989 "Main.tex" "Main.pdf" "Main" 1507712477
+  "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1507084670 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
+  "/usr/share/texmf-dist/fonts/tfm/public/cm/cmr10.tfm" 1507084670 1296 45809c5a464d5f32c8f98ba97c1bb47f ""
+  "/usr/share/texmf-dist/tex/latex/base/report.cls" 1507084670 22880 e7be6f7dd8c05d5108bf3a7d8cabe59a ""
+  "/usr/share/texmf-dist/tex/latex/base/size11.clo" 1507084670 8308 f91506bb4df6d8527331f7bbeaf0e63c ""
+  "/usr/share/texmf-dist/tex/latex/base/textcomp.sty" 1507084670 16155 3b0b2cc7c05e0ccf8c3ce5da21d4bccb ""
+  "/usr/share/texmf-dist/tex/latex/base/ts1enc.def" 1507084670 7767 aa88823823f5e767d79ea1166ab1ae74 ""
+  "/usr/share/texmf-dist/tex/latex/lastpage/lastpage.sty" 1507084670 9922 eb7d00b99f0f5207f71a5cdcbafceac1 ""
+  "/usr/share/texmf-dist/tex/latex/moreverb/moreverb.sty" 1507084670 5863 07095464939df437145876547e980c96 ""
+  "/usr/share/texmf-dist/tex/latex/tools/verbatim.sty" 1507084670 7264 cf839ee7f0c2bfc711b0b88970764569 ""
+  "/usr/share/texmf-dist/tex/latex/url/url.sty" 1507084670 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
+  "/usr/share/texmf-dist/web2c/texmf.cnf" 1507084670 32649 c0b029bc2b2c76575aa6ca7a7463abbe ""
+  "/usr/share/texmf-var/web2c/pdftex/pdflatex.fmt" 1507084670 3884428 8cb6a879cbf9e43f4a3071edc7c40c0c ""
+  "Main.aux" 1507663473 1783 3d3b8e1a640e47458bd9393386a8fb63 ""
+  "Main.tex" 1507712477 972 6b97c3353571033d16d99fbc46bf083d ""
+  "include/settings/settings.tex" 1507662683 3461 e034246e129553b4c7af7cc7ff7dce3c ""
+  "lmodern.sty" 0 -1 0 ""
+  (generated)
+  "Main.pdf"
+  "Main.log"
