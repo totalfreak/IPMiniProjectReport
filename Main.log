@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.11.2)  16 NOV 2017 10:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.11.2)  16 NOV 2017 11:19
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1169,10 +1169,10 @@ File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 \@float@every@listing=\toks41
 \c@listing=\count167
 )
-runsystem(mkdir -p "_minted-Main")...executed.
+runsystem(mkdir -p "/tmp/xxx//tmp/mint2")...executed.
 
 
-(./_minted-Main/default.pygstyle)
+(/tmp/xxx//tmp/mint2/default.pygstyle)
 (/usr/share/texmf-dist/tex/generic/dirtree/dirtree.sty
 Package: dirtree 2012/12/11 v0.32 package wrapper for dirtree
 
@@ -1302,7 +1302,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip54
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 55.
+Package hyperref Info: Option `colorlinks' set `true' on input line 57.
 
 (/usr/share/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2016/03/21 v2.10.2 Sectioning titles
@@ -1550,7 +1550,7 @@ ABD: EveryShipout initializing macros
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \AtBeginShipoutBox=\box86
-(./_minted-Main/default-pyg-prefix.pygstyle)
+(/tmp/xxx//tmp/mint2/default-pyg-prefix.pygstyle)
 Package hyperref Info: Link coloring ON on input line 5.
 
 (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
@@ -1611,7 +1611,7 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
-<figure/Frontpage/frontpage.png, id=27, 990.70125pt x 471.7625pt>
+<figure/Frontpage/frontpage.png, id=19, 990.70125pt x 471.7625pt>
 File: figure/Frontpage/frontpage.png Graphic file (type png)
 
 <use figure/Frontpage/frontpage.png>
@@ -1635,7 +1635,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--30
 
  []
 
-<figure/Frontpage/frontpage-aau.pdf, id=29, 2489.21962pt x 3520.99449pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--30
+
+ []
+
+<figure/Frontpage/frontpage-aau.pdf, id=22, 2489.21962pt x 3520.99449pt>
 File: figure/Frontpage/frontpage-aau.pdf Graphic file (type pdf)
 
 <use figure/Frontpage/frontpage-aau.pdf>
@@ -1658,51 +1663,66 @@ been already used, duplicate ignored
 l.16 \newpage
               [1
 
-] (./include/Indledning.tex
+] (./include/Analyse.tex
 Chapter 1.
-) (./include/Analyse.tex [1
+) (./include/Design.tex [1
 
 ]
 Chapter 2.
-) (./Main.bbl [2
+Package hyperref Info: bookmark level for unknown listing defaults to 0 on inpu
+t line 3.
+\openout5 = `Main.pyg'.
+
+runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -o "/tm
+p/xxx//tmp/mint2/8FC47730343756330E2A864EB2CBB4A5.pygtex" "/tmp/xxx/Main.pyg" )
+...executed.
+
+
+! Package minted Error: Missing Pygments output; \inputminted was
+probably given a file that does not exist--otherwise, you may need 
+the outputdir package option, or may be using an incompatible build tool.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7     	\end{minted}
+                     
+This could be caused by using -output-directory or -aux-directory 
+without setting minted's outputdir, or by using a build tool that 
+changes paths in ways minted cannot detect.
+
+) 
+AED: lastpage setting LastPage
+[2
 
 ]
-
-Package natbib Warning: Empty `thebibliography' environment on input line 8.
-
-) [3
-
-] [4
-
-
-] (./include/Appendices.tex) 
-AED: lastpage setting LastPage
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 49.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 49.
-(./Main.aux)
+ (./Main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 49.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 49.
 Package rerunfilecheck Info: File `Main.out' has not changed.
-(rerunfilecheck)             Checksum: 4A2C085CFAD48FD3DA6DB10383976DAE;228.
+(rerunfilecheck)             Checksum: 7B46BEFB08C60B32A952E51604F63FD6;127.
  ) 
 Here is how much of TeX's memory you used:
- 25932 strings out of 493014
- 457622 string characters out of 6122320
- 685339 words of memory out of 5000000
- 28916 multiletter control sequences out of 15000+600000
+ 25951 strings out of 493014
+ 458080 string characters out of 6122320
+ 685620 words of memory out of 5000000
+ 28940 multiletter control sequences out of 15000+600000
  41638 words of font info for 37 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 64i,13n,67p,848b,498s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 64i,13n,75p,848b,498s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf-dist/fo
 nts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fonts/type1/public/lm/lmbx10.p
 fb></usr/share/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf-di
 st/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf-dist/fonts/type1/public/lm
 /lmr17.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/sha
 re/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on Main.pdf (6 pages, 1166516 bytes).
+Output written on Main.pdf (4 pages, 1164054 bytes).
 PDF statistics:
- 101 PDF objects out of 1000 (max. 8388607)
- 82 compressed objects within 1 object stream
- 16 named destinations out of 1000 (max. 500000)
- 63 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 85 PDF objects out of 1000 (max. 8388607)
+ 68 compressed objects within 1 object stream
+ 13 named destinations out of 1000 (max. 500000)
+ 47 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -30,7 +30,9 @@
 	\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{#3}}}}
 \usepackage{float} 									% Enables object position enforcement using [H]
 \usepackage{parskip}								% Enables vertical spaces correctly 
-\usepackage{minted}
+%\usepackage{minted}
+\newcommand{\mintedoptions}{cachedir=/tmp/mint2,outputdir=/tmp/xxx}
+\usepackage[\mintedoptions]{minted}
 %Code highlighting and formatting
 \usepackage{dirtree}
 %Appendix
