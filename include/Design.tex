@@ -1,11 +1,4 @@
 \chapter{The code}
-	\begin{enumerate}
-		\item An explanation of their algorithm
-		\item Their code
-		\item An explanation of their code
-		\item A documentation of the program (show input and output) and showing the effect of different parameters on the algorithm, if any shit\\
-	\end{enumerate}
-
 	The code in it's entirety can be found in the appendix \autoref{listing:code1} and \autoref{listing:code2}, or in the \href{https://github.com/totalfreak/opencvFilters}{\color{blue}Project repo}. This chapter will focus on the important bits, and not showcase all the code as that wouldn't be a proper use of anyone's time.\\
 	\\
 	Starting out, we make the two kernels, these kernel values are based on the official numbers from the wikipedia article about edge detection, the official opencv documentation, plus trial and error.
@@ -36,7 +29,7 @@ Mat gradY = imgGray.clone();
 Mat gradF = imgGray.clone();
 	\end{minted}
 \end{listing}\newpage
-Now we have to convolve the image in the horizontal and vertical direction, we start off with x kernel. Convolving the image requires a double for loop, for both the x and the y positions. Starting at the very beginning of the image, it will for every pixel, add unto an integer the result from applying the kernel to the pixel and it's neighbors. The exact same thing is done for the y part of the image, except it is saved in gradY instead, and using the yKernel instead of the xKernel.
+Now we have to convolve the image in the horizontal and vertical direction, we start off with the x kernel. Convolving the image requires a double for loop, for both the x and the y positions. Starting at the very beginning of the image, it will for every pixel, add unto an integer the result from applying the kernel to the pixel and it's neighbors. The exact same thing is done for the y part of the image, except it is saved in gradY instead, and using the yKernel instead of the xKernel.
 \begin{listing}[H]
 	\caption{Looping over the the image with the x kernel to get approximate gradient on the x axis of the image.}
 	\label{listing:xLoop}
@@ -58,7 +51,7 @@ for (int row = radius; row < src.rows - radius; row++) {
 The last part is taking the two resulting gradients from each axis, and applying the formula $gradF = \sqrt{xGrad^2+yGrad^2}$ on every pixel from both images, essentially combining them. Then we do an extremely simple threshold to emphasize any remaining edges, but unfortunately also making the border of the image, completely white.
 
 \begin{listing}[H]
-	\caption{Calculating an approximation of the gradient at every point, using both the x and y images}
+	\caption{Calculating an approximation of the gradient at every point, using both the x and y resulting images}
 	\label{listing:finalGradient}
 	\begin{minted}[frame=lines, framesep=2mm,baselinestretch=1.1,fontsize=\footnotesize,linenos]{cpp}
 for (int row = 0; row < gradF.rows; row++) {

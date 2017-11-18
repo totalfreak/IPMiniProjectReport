@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2017.11.8)  18 NOV 2017 19:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2017.11.8)  18 NOV 2017 20:48
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1793,23 +1793,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 34--38
 ) (./include/Design.tex [2]
 Chapter 2.
 
-Underfull \hbox (badness 10000) in paragraph at lines 6--7
-
- []
+Package hyperref Warning: No autoref name for `listing' on input line 2.
 
 
-Package hyperref Warning: No autoref name for `listing' on input line 9.
+Package hyperref Warning: No autoref name for `listing' on input line 2.
 
 
-Package hyperref Warning: No autoref name for `listing' on input line 9.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 9--12
+Underfull \hbox (badness 10000) in paragraph at lines 2--5
 
  []
 
 Package hyperref Info: bookmark level for unknown listing defaults to 0 on inpu
-t line 14.
+t line 7.
 \openout5 = `Main.pyg'.
 
 (./_minted-Main/default-pyg-prefix.pygstyle) (./_minted-Main/default.pygstyle)
@@ -1840,9 +1835,61 @@ LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <9> not available
 (./_minted-Main/E747D8B2A17C45DB65CFC9312BC5E8AD16E60121E4D64E8F0EBAE25F72F33F0
 3.pygtex)) (./include/Implemention.tex [4]
 Chapter 3.
-) [5
+<figure/originalImage.png, id=98, 642.4pt x 481.8pt>
+File: figure/originalImage.png Graphic file (type png)
+<use figure/originalImage.png>
+Package pdftex.def Info: figure/originalImage.png  used on input line 5. on inp
+ut line 5.
+Package pdftex.def Info: Requested size: 256.07741pt x 192.06227pt on input lin
+e 5.
+<figure/grayScaleImage.png, id=99, 642.4pt x 481.8pt>
+File: figure/grayScaleImage.png Graphic file (type png)
+<use figure/grayScaleImage.png>
+Package pdftex.def Info: figure/grayScaleImage.png  used on input line 12. on i
+nput line 12.
+Package pdftex.def Info: Requested size: 256.07741pt x 192.06227pt on input lin
+e 12.
+<figure/xEdge.png, id=100, 642.4pt x 481.8pt>
+File: figure/xEdge.png Graphic file (type png)
+<use figure/xEdge.png>
+Package pdftex.def Info: figure/xEdge.png  used on input line 19. on input line
+ 19.
+Package pdftex.def Info: Requested size: 256.07741pt x 192.06227pt on input lin
+e 19.
+[5
 
-] [6
+ <./figure/originalImage.png> <./figure/grayScaleImage.png>]
+<figure/yEdge.png, id=108, 642.4pt x 481.8pt>
+File: figure/yEdge.png Graphic file (type png)
+<use figure/yEdge.png>
+Package pdftex.def Info: figure/yEdge.png  used on input line 26. on input line
+ 26.
+Package pdftex.def Info: Requested size: 256.07741pt x 192.06227pt on input lin
+e 26.
+ [6 <./figure/xEdge.png> <./figure/yEdge.png>]
+<figure/finalGradient.png, id=115, 642.4pt x 481.8pt>
+File: figure/finalGradient.png Graphic file (type png)
+<use figure/finalGradient.png>
+Package pdftex.def Info: figure/finalGradient.png  used on input line 33. on in
+put line 33.
+Package pdftex.def Info: Requested size: 256.07741pt x 192.06227pt on input lin
+e 33.
+<figure/scale120.png, id=117, 642.4pt x 481.8pt>
+File: figure/scale120.png Graphic file (type png)
+<use figure/scale120.png>
+Package pdftex.def Info: figure/scale120.png  used on input line 42. on input l
+ine 42.
+Package pdftex.def Info: Requested size: 256.07741pt x 192.06227pt on input lin
+e 42.
+ [7 <./figure/finalGradient.png> <./figure/scale120.png>]
+<figure/otherKernel.png, id=125, 642.4pt x 481.8pt>
+File: figure/otherKernel.png Graphic file (type png)
+<use figure/otherKernel.png>
+Package pdftex.def Info: figure/otherKernel.png  used on input line 64. on inpu
+t line 64.
+Package pdftex.def Info: Requested size: 298.75264pt x 224.07144pt on input lin
+e 64.
+) [8 <./figure/otherKernel.png>] [9
 
 
 ] (./include/Appendices.tex
@@ -1855,24 +1902,24 @@ Chapter 3.
 
 
 (./_minted-Main/8176F9D5F64DA4CDABA440D0A78BA9AD16E60121E4D64E8F0EBAE25F72F33F0
-3.pygtex)) [7] 
+3.pygtex)) [10] 
 AED: lastpage setting LastPage
-[8]
+[11]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 49.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 49.
  (./Main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 49.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 49.
 Package rerunfilecheck Info: File `Main.out' has not changed.
-(rerunfilecheck)             Checksum: 03BD6755599A51AB93489E06563C42F2;223.
+(rerunfilecheck)             Checksum: DD5E400A7BA959FB28A29C978E9CD652;224.
 runsystem(rm Main.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 26666 strings out of 492990
- 479484 string characters out of 6135005
- 717832 words of memory out of 5000000
- 29574 multiletter control sequences out of 15000+600000
+ 26715 strings out of 492990
+ 480525 string characters out of 6135005
+ 718315 words of memory out of 5000000
+ 29609 multiletter control sequences out of 15000+600000
  60516 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  64i,13n,77p,873b,598s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1890,10 +1937,10 @@ nts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb><
 hare/texmf/fonts/type1/public/lm/lmtti10.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
 /helvetic/uhvr8a.pfb>
-Output written on Main.pdf (10 pages, 1323176 bytes).
+Output written on Main.pdf (13 pages, 1994939 bytes).
 PDF statistics:
- 180 PDF objects out of 1000 (max. 8388607)
- 147 compressed objects within 2 object streams
- 33 named destinations out of 1000 (max. 500000)
- 68 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 209 PDF objects out of 1000 (max. 8388607)
+ 166 compressed objects within 2 object streams
+ 40 named destinations out of 1000 (max. 500000)
+ 103 words of extra memory for PDF output out of 10000 (max. 10000000)
 
