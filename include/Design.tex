@@ -1,4 +1,15 @@
-\chapter{Code}
+\chapter{The code}
+	\begin{enumerate}
+		\item An explanation of their algorithm
+		\item Their code
+		\item An explanation of their code
+		\item A documentation of the program (show input and output) and showing the effect of different parameters on the algorithm, if any shit\\
+	\end{enumerate}
+
+	The code in it's entirety can be found in the appendix \autoref{listing:code1} and \autoref{listing:code2}, or in the \href{https://github.com/totalfreak/opencvFilters}{\color{blue}Project repo}. This chapter will focus on the important bits, and not showcase all the code as that wouldn't be a proper use of anyone's time.\\
+	\\
+	Starting out, we make the two kernels, these kernel values are based on the official numbers from the wikipedia article about edge detection, the official opencv documentation, plus trial and error.
+
     \begin{listing}[H]
     	\caption{Horizontal and vertical kernels}
     	\label{listing:kernels}
@@ -10,3 +21,58 @@ int kernelX[3][3] = {1, 0, -1, 2, 0, -2, 1, 0, -1};
 int kernelY[3][3] = {1, 2, 1, 0, 0, 0, -1, -2, -1};
     	\end{minted}
     \end{listing}
+	After that we take the gray scale version of the original image and clone it into all the materials that will be used later on. 
+\begin{listing}[H]
+	\caption{Cloning the gray scale image into all the to be used materials}
+	\label{listing:matClone}
+	\begin{minted}[frame=lines, framesep=2mm,baselinestretch=1.1,fontsize=\footnotesize,linenos]{cpp}
+int radius = 1;
+
+Mat src = imgGray.clone();
+
+//Saving the current "initial" image
+Mat gradX = imgGray.clone();
+Mat gradY = imgGray.clone();
+Mat gradF = imgGray.clone();
+	\end{minted}
+\end{listing}\newpage
+Now we have to convolve the image in the horizontal and vertical direction, we start off with x kernel. Convolving the image requires a double for loop, for both the x and the y positions. Starting at the very beginning of the image, it will for every pixel, add unto an integer the result from applying the kernel to the pixel and it's neighbors. The exact same thing is done for the y part of the image, except it is saved in gradY instead, and using the yKernel instead of the xKernel.
+\begin{listing}[H]
+	\caption{Looping over the the image with the x kernel to get approximate gradient on the x axis of the image.}
+	\label{listing:xLoop}
+	\begin{minted}[frame=lines, framesep=2mm,baselinestretch=1.1,fontsize=\footnotesize,linenos]{cpp}
+for (int row = radius; row < src.rows - radius; row++) {
+	for (int col = radius; col < src.cols - radius; col++) {
+		int scale = 0;
+		for (int i = -radius; i <= radius; i++) {
+			for (int j = -radius; j <= radius; j++) {
+			   scale += src.at<uchar>(row + i, col + j) * kernelX[i + radius][j + radius];
+			}
+		}
+		gradX.at<uchar>(row - radius, col - radius) = scale / 60;
+	}
+}
+	\end{minted}
+\end{listing}
+
+The last part is taking the two resulting gradients from each axis, and applying the formula $gradF = \sqrt{xGrad^2+yGrad^2}$ on every pixel from both images, essentially combining them. Then we do an extremely simple threshold to emphasize any remaining edges, but unfortunately also making the border of the image, completely white.
+
+\begin{listing}[H]
+	\caption{Calculating an approximation of the gradient at every point, using both the x and y images}
+	\label{listing:finalGradient}
+	\begin{minted}[frame=lines, framesep=2mm,baselinestretch=1.1,fontsize=\footnotesize,linenos]{cpp}
+for (int row = 0; row < gradF.rows; row++) {
+	for (int col = 0; col < gradF.cols; col++) {
+		gradF.at<uchar>(row, col) = 
+		static_cast<uchar>
+		(sqrt(pow(gradX.at<uchar>(row, col), 2) + pow(gradY.at<uchar>(row, col), 2)));
+		
+		if (gradF.at<uchar>(row, col) > 240) {
+			gradF.at<uchar>(row, col) = 255;
+		} else {
+			gradF.at<uchar>(row, col) = 0;
+		}
+	}
+}
+	\end{minted}
+\end{listing}
