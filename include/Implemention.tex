@@ -2,15 +2,8 @@
 When the program runs, it takes the image, and performs the image processing on it. Along the way it makes windows showing the steps visually. First step is just the input image
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=0.6\linewidth]{figure/originalImage}
-		\caption{The input image}
-		\label{fig:originalImage}
-	\end{figure}
-	We then use the built-in opencv function to convert the image to gray scale, as this isn't strictly relevant to horizontal and vertical edge detection.
-	\begin{figure}[H]
-		\centering
 		\includegraphics[width=0.6\linewidth]{figure/grayScaleImage}
-		\caption{Gray scale image}
+		\caption{The input image}
 		\label{fig:grayScaleImage}
 	\end{figure}
 	This is then the image after the vertical edges have been detected.
@@ -26,7 +19,7 @@ When the program runs, it takes the image, and performs the image processing on 
 		\includegraphics[width=0.6\linewidth]{figure/yEdge}
 		\caption{Horizontal edges detected}
 		\label{fig:yEdge}
-	\end{figure}\newpage
+	\end{figure}
 And then there's the complete final result, with the combined images.
 \begin{figure}[H]
 	\centering
@@ -36,13 +29,13 @@ And then there's the complete final result, with the combined images.
 \end{figure}
 
 Now the two very important parts of the program is the kernels, and the amount you divide the scale by, when taking the gradients of the image.
-Starting off with the scale number, I am fairly certain this is a form of simple normalization. Doubling the number from 480 to 960, makes the function much more aggressive, as seen in \autoref{fig:scale120}.
+Starting off with the scale number, I am fairly certain this is a form of simple normalization. Doubling the number from 240 to 480, makes the function much more aggressive, as seen in \autoref{fig:scale120}.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.6\linewidth]{figure/scale120}
 	\caption{The final image, with the doubled scale divider number}
 	\label{fig:scale120}
-\end{figure}\newpage
+\end{figure}
 Now when changing the kernel, the results change drastically. The kernel used in \autoref{fig:otherKernel} looks like this
 \[
 xKernel = 

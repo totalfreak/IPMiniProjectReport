@@ -13,7 +13,7 @@
 				\PYG{p}{[}\PYG{n}{j} \PYG{o}{+} \PYG{n}{radius}\PYG{p}{];}
 			\PYG{p}{\PYGZcb{}}
 		\PYG{p}{\PYGZcb{}}
-		\PYG{n}{gradY}\PYG{p}{.}\PYG{n}{at}\PYG{o}{\PYGZlt{}}\PYG{n}{uchar}\PYG{o}{\PYGZgt{}}\PYG{p}{(}\PYG{n}{row} \PYG{o}{\PYGZhy{}} \PYG{n}{radius}\PYG{p}{,} \PYG{n}{col} \PYG{o}{\PYGZhy{}} \PYG{n}{radius}\PYG{p}{)} \PYG{o}{=} \PYG{n}{scale} \PYG{o}{/} \PYG{l+m+mi}{480}\PYG{p}{;}
+		\PYG{n}{gradY}\PYG{p}{.}\PYG{n}{at}\PYG{o}{\PYGZlt{}}\PYG{n}{uchar}\PYG{o}{\PYGZgt{}}\PYG{p}{(}\PYG{n}{row} \PYG{o}{\PYGZhy{}} \PYG{n}{radius}\PYG{p}{,} \PYG{n}{col} \PYG{o}{\PYGZhy{}} \PYG{n}{radius}\PYG{p}{)} \PYG{o}{=} \PYG{n}{scale} \PYG{o}{/} \PYG{l+m+mi}{240}\PYG{p}{;}
 	\PYG{p}{\PYGZcb{}}
 \PYG{p}{\PYGZcb{}}
 
@@ -41,7 +41,7 @@
 
 \PYG{k+kt}{int} \PYG{n}{main}\PYG{p}{()} \PYG{p}{\PYGZob{}}
 
-\PYG{n}{src}\PYG{o}{=} \PYG{n}{imread}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}/home/daniel/Documents/opencvFilters/horizont.jpg\PYGZdq{}}\PYG{p}{,} \PYG{n}{CV\PYGZus{}LOAD\PYGZus{}IMAGE\PYGZus{}GRAYSCALE}\PYG{p}{);}
+\PYG{n}{src}\PYG{o}{=} \PYG{n}{imread}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}/home/daniel/Documents/opencvFilters/stars.jpeg\PYGZdq{}}\PYG{p}{,} \PYG{n}{CV\PYGZus{}LOAD\PYGZus{}IMAGE\PYGZus{}GRAYSCALE}\PYG{p}{);}
 
 \PYG{k}{if} \PYG{p}{(}\PYG{n}{src}\PYG{p}{.}\PYG{n}{empty}\PYG{p}{())} \PYG{k}{return} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{;}
 

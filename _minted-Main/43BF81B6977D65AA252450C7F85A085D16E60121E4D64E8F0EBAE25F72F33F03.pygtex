@@ -43,7 +43,7 @@
 					\PYG{p}{[}\PYG{n}{j} \PYG{o}{+} \PYG{n}{radius}\PYG{p}{];}
 				\PYG{p}{\PYGZcb{}}
 			\PYG{p}{\PYGZcb{}}
-			\PYG{n}{gradX}\PYG{p}{.}\PYG{n}{at}\PYG{o}{\PYGZlt{}}\PYG{n}{uchar}\PYG{o}{\PYGZgt{}}\PYG{p}{(}\PYG{n}{row} \PYG{o}{\PYGZhy{}} \PYG{n}{radius}\PYG{p}{,} \PYG{n}{col} \PYG{o}{\PYGZhy{}} \PYG{n}{radius}\PYG{p}{)} \PYG{o}{=} \PYG{n}{scale} \PYG{o}{/} \PYG{l+m+mi}{480}\PYG{p}{;}
+			\PYG{n}{gradX}\PYG{p}{.}\PYG{n}{at}\PYG{o}{\PYGZlt{}}\PYG{n}{uchar}\PYG{o}{\PYGZgt{}}\PYG{p}{(}\PYG{n}{row} \PYG{o}{\PYGZhy{}} \PYG{n}{radius}\PYG{p}{,} \PYG{n}{col} \PYG{o}{\PYGZhy{}} \PYG{n}{radius}\PYG{p}{)} \PYG{o}{=} \PYG{n}{scale} \PYG{o}{/} \PYG{l+m+mi}{240}\PYG{p}{;}
 		\PYG{p}{\PYGZcb{}}
 	\PYG{p}{\PYGZcb{}}
 \end{Verbatim}

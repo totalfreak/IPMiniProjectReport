@@ -40,7 +40,7 @@ for (int row = radius; row < src.rows - radius; row++) {
 				scale += src.at<uchar>(row + i, col + j) * kernelX[i + radius][j + radius];
 			}
 		}
-		gradX.at<uchar>(row - radius, col - radius) = scale / 480s;
+		gradX.at<uchar>(row - radius, col - radius) = scale / 240;
 	}
 }
 	\end{minted}
