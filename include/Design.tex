@@ -21,12 +21,10 @@ int kernelY[3][3] = {1, 2, 1, 0, 0, 0, -1, -2, -1};
 	\begin{minted}[frame=lines, framesep=2mm,baselinestretch=1.1,fontsize=\footnotesize,linenos]{cpp}
 int radius = 1;
 
-Mat src = imgGray.clone();
-
-//Saving the current "initial" image
-Mat gradX = imgGray.clone();
-Mat gradY = imgGray.clone();
-Mat gradF = imgGray.clone();
+//Saving the initial image, to be overwritten by the for loops
+gradX = src.clone();
+gradY = src.clone();
+gradF = src.clone();
 	\end{minted}
 \end{listing}\newpage
 Now we have to convolve the image in the horizontal and vertical direction, we start off with the x kernel. Convolving the image requires a double for loop, for both the x and the y positions. Starting at the very beginning of the image, it will for every pixel, add unto an integer the result from applying the kernel to the pixel and it's neighbors. The exact same thing is done for the y part of the image, except it is saved in gradY instead, and using the yKernel instead of the xKernel.
@@ -39,10 +37,10 @@ for (int row = radius; row < src.rows - radius; row++) {
 		int scale = 0;
 		for (int i = -radius; i <= radius; i++) {
 			for (int j = -radius; j <= radius; j++) {
-			   scale += src.at<uchar>(row + i, col + j) * kernelX[i + radius][j + radius];
+				scale += src.at<uchar>(row + i, col + j) * kernelX[i + radius][j + radius];
 			}
 		}
-		gradX.at<uchar>(row - radius, col - radius) = scale / 60;
+		gradX.at<uchar>(row - radius, col - radius) = scale / 480s;
 	}
 }
 	\end{minted}
@@ -56,11 +54,11 @@ The last part is taking the two resulting gradients from each axis, and applying
 	\begin{minted}[frame=lines, framesep=2mm,baselinestretch=1.1,fontsize=\footnotesize,linenos]{cpp}
 for (int row = 0; row < gradF.rows; row++) {
 	for (int col = 0; col < gradF.cols; col++) {
-		gradF.at<uchar>(row, col) = 
-		static_cast<uchar>
-		(sqrt(pow(gradX.at<uchar>(row, col), 2) + pow(gradY.at<uchar>(row, col), 2)));
 		
-		if (gradF.at<uchar>(row, col) > 240) {
+		gradF.at<uchar>(row, col) = static_cast<uchar>(sqrt(pow(gradX.at<uchar>(row, col), 2) +
+		pow(gradY.at<uchar>(row, col), 2)));
+		//Simple threshold
+		if (gradF.at<uchar>(row, col) > 1) {
 			gradF.at<uchar>(row, col) = 255;
 		} else {
 			gradF.at<uchar>(row, col) = 0;

@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2017.11.8)  18 NOV 2017 20:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2017.11.16)  4 DEC 2017 09:51
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
 **Main.tex
 (./Main.tex
 LaTeX2e <2017-04-15>
-Babel <3.12> and hyphenation patterns for 84 language(s) loaded.
+Babel <3.12> and hyphenation patterns for 3 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size11.clo
@@ -194,6 +194,8 @@ File: switch.def 2017/06/29 3.12 Babel switching mechanism
 \babel@savecnt=\count91
 \U@D=\dimen103
 )
+\l@british = a dialect from \language\l@english 
+\l@UKenglish = a dialect from \language\l@english 
 \l@canadian = a dialect from \language\l@american 
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
@@ -1820,19 +1822,23 @@ LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <9> not available
 \openout5 = `Main.pyg'.
 
 
-(./_minted-Main/C6576E55FF8668797ABCEC23966CAFF116E60121E4D64E8F0EBAE25F72F33F0
+(./_minted-Main/3D5633B4C44F1414735A012A0064418916E60121E4D64E8F0EBAE25F72F33F0
 3.pygtex) [3
 
 ]
 \openout5 = `Main.pyg'.
 
+runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -o _min
+ted-Main/2D45CC98A0F9315E409D1E6FC7450D4E16E60121E4D64E8F0EBAE25F72F33F03.pygte
+x Main.pyg)...executed.
 
-(./_minted-Main/C52CD13F688794A55157146686EBD02416E60121E4D64E8F0EBAE25F72F33F0
+
+(./_minted-Main/2D45CC98A0F9315E409D1E6FC7450D4E16E60121E4D64E8F0EBAE25F72F33F0
 3.pygtex)
 \openout5 = `Main.pyg'.
 
 
-(./_minted-Main/E747D8B2A17C45DB65CFC9312BC5E8AD16E60121E4D64E8F0EBAE25F72F33F0
+(./_minted-Main/39929016C06B0F53FD953672A506872916E60121E4D64E8F0EBAE25F72F33F0
 3.pygtex)) (./include/Implemention.tex [4]
 Chapter 3.
 <figure/originalImage.png, id=98, 642.4pt x 481.8pt>
@@ -1895,16 +1901,33 @@ e 64.
 ] (./include/Appendices.tex
 \openout5 = `Main.pyg'.
 
+runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -o _min
+ted-Main/0B12953B8D3F9BF62E68B38F29FAA52A16E60121E4D64E8F0EBAE25F72F33F03.pygte
+x Main.pyg)...executed.
 
-(./_minted-Main/280F99A9B3BA563BB24CBEF4A0F7BF0F16E60121E4D64E8F0EBAE25F72F33F0
+
+(./_minted-Main/0B12953B8D3F9BF62E68B38F29FAA52A16E60121E4D64E8F0EBAE25F72F33F0
 3.pygtex)
 \openout5 = `Main.pyg'.
 
+runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -o _min
+ted-Main/A1CD73365BFAF0D9B7324D803730DAC216E60121E4D64E8F0EBAE25F72F33F03.pygte
+x Main.pyg)...executed.
 
-(./_minted-Main/8176F9D5F64DA4CDABA440D0A78BA9AD16E60121E4D64E8F0EBAE25F72F33F0
+
+(./_minted-Main/A1CD73365BFAF0D9B7324D803730DAC216E60121E4D64E8F0EBAE25F72F33F0
 3.pygtex)) [10] 
 AED: lastpage setting LastPage
 [11]
+runsystem(rm _minted-Main/122156283660F47EEE10A175F127E51416E60121E4D64E8F0EBAE
+25F72F33F03.pygtex)...executed.
+
+runsystem(rm _minted-Main/59C0F9D016AC57F06BD759792CBFD18916E60121E4D64E8F0EBAE
+25F72F33F03.pygtex)...executed.
+
+runsystem(rm _minted-Main/4FD86813B476A4369A763290F986631616E60121E4D64E8F0EBAE
+25F72F33F03.pygtex)...executed.
+
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 49.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 49.
  (./Main.aux)
@@ -1916,12 +1939,12 @@ runsystem(rm Main.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 26715 strings out of 492990
- 480525 string characters out of 6135005
- 718315 words of memory out of 5000000
- 29609 multiletter control sequences out of 15000+600000
+ 26720 strings out of 494931
+ 480737 string characters out of 6180850
+ 712386 words of memory out of 5000000
+ 29361 multiletter control sequences out of 15000+600000
  60516 words of font info for 57 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
+ 14 hyphenation exceptions out of 8191
  64i,13n,77p,873b,598s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
 ips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share
@@ -1937,7 +1960,7 @@ nts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb><
 hare/texmf/fonts/type1/public/lm/lmtti10.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
 /helvetic/uhvr8a.pfb>
-Output written on Main.pdf (13 pages, 1994939 bytes).
+Output written on Main.pdf (13 pages, 1993679 bytes).
 PDF statistics:
  209 PDF objects out of 1000 (max. 8388607)
  166 compressed objects within 2 object streams

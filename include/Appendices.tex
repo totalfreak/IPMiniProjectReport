@@ -8,36 +8,32 @@
 
 using namespace cv;
 
-Mat img, imgGray;
+Mat src, gradF, gradX, gradY;
 
 void doImageProcessing() {
 	
-	//The image is really high resolution for making many windows, so I use 
-	//the opencv function resize, to make it more manageable
-	resize(img, img, Size(640, 480));
-	
-	imshow("original image", img);
-	
-	//Converting image to grayscale
-	cvtColor(img, imgGray, CV_BGR2GRAY);
-	imshow("Original gray scale image", imgGray);
-	
-	//Standard Sobel kernel
-	int kernelX[3][3] = {1, 0, -1, 2, 0, -2, 1, 0, -1};
+	imshow("original image", src);
 	
 	
 	//Standard Sobel kernel
-	int kernelY[3][3] = {1, 2, 1, 0, 0, 0, -1, -2, -1};
+	//int kernelX[3][3] = {1, 0, -1, 2, 0, -2, 1, 0, -1};
+	
+	//Sobel-Feldman kernel
+	int kernelX[3][3] = {-3, 0, 3, -10, 0, 10, -3, 0, 3};
+	
+	//Standard Sobel kernel
+	//int kernelY[3][3] = {1, 2, 1, 0, 0, 0, -1, -2, -1};
+	
+	//Sobel-Feldman kernel
+	int kernelY[3][3] = {-3, -10, -3, 0, 0, 0, 3, 10, 3};
 	
 	
 	int radius = 1;
 	
-	Mat src = imgGray.clone();
-	
-	//Saving the current "initial" image
-	Mat gradX = imgGray.clone();
-	Mat gradY = imgGray.clone();
-	Mat gradF = imgGray.clone();
+	//Saving the initial image, to be overwritten by the for loops
+	gradX = src.clone();
+	gradY = src.clone();
+	gradF = src.clone();
 	
 	//Looping over the the image with the x kernel
 	//From this we get the gradient image
@@ -46,11 +42,11 @@ void doImageProcessing() {
 			int scale = 0;
 			for (int i = -radius; i <= radius; i++) {
 				for (int j = -radius; j <= radius; j++) {
-					scale += 
-					src.at<uchar>(row + i, col + j) * kernelX[i + radius][j + radius];
+					scale += src.at<uchar>(row + i, col + j) * kernelX[i + radius]
+					[j + radius];
 				}
 			}
-			gradX.at<uchar>(row - radius, col - radius) = scale / 60;
+			gradX.at<uchar>(row - radius, col - radius) = scale / 480;
 		}
 	}
     	\end{minted}
@@ -61,7 +57,8 @@ void doImageProcessing() {
 	\caption{Horizontal and vertical kernels}
 	\label{listing:code2}
 	\begin{minted}[frame=lines, framesep=2mm,baselinestretch=1.1,fontsize=\footnotesize,linenos]{cpp}
-imshow("X edge detection", gradX);
+    imshow("X edge detection", gradX);
+
 //Looping over the image with the y kernel
 //From this we get the gradient image
 for (int row = radius; row < src.rows - radius; row++) {
@@ -70,25 +67,23 @@ for (int row = radius; row < src.rows - radius; row++) {
 		
 		for (int i = -radius; i <= radius; i++) {
 			for (int j = -radius; j <= radius; j++) {
-				scale += 
-				src.at<uchar>(row + i, col + j)* kernelY[i + radius][j + radius];
+				scale += src.at<uchar>(row + i, col + j)* kernelY[i + radius]
+				[j + radius];
 			}
 		}
-		gradY.at<uchar>(row - radius, col - radius) = scale / 60;
+		gradY.at<uchar>(row - radius, col - radius) = scale / 480;
 	}
 }
 
 imshow("Y edge detection", gradY);
 
-
 //Here we calculate an approximation of the gradient at every point, using both the x and y images
 for (int row = 0; row < gradF.rows; row++) {
 	for (int col = 0; col < gradF.cols; col++) {
 		
-		gradF.at<uchar>(row, col) = static_cast<uchar>(sqrt(pow(gradX.at<uchar>(row, col), 2)
-		 + pow(gradY.at<uchar>(row, col), 2)));
-		//If the magnitude of the resulting pixel is higher than 240, max it
-		//Else zero it, thus making the image binary, and kewl
+		gradF.at<uchar>(row, col) = static_cast<uchar>(sqrt(pow(gradX.at<uchar>(row, col), 2) + 
+		pow(gradY.at<uchar>(row, col), 2)));
+		//Simple threshold
 		if (gradF.at<uchar>(row, col) > 1) {
 			gradF.at<uchar>(row, col) = 255;
 		} else {
@@ -104,9 +99,9 @@ waitKey(0);
 
 int main() {
 
-img = imread("/home/daniel/Documents/opencvFilters/stars.jpeg", CV_LOAD_IMAGE_UNCHANGED);
+src= imread("/home/daniel/Documents/opencvFilters/horizont.jpg", CV_LOAD_IMAGE_GRAYSCALE);
 
-if (img.empty()) return -1;
+if (src.empty()) return -1;
 
 doImageProcessing();
 return 0;

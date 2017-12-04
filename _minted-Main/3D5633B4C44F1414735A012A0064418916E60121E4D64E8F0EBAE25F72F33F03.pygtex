@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kt}{int} \PYG{n}{radius} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{p}{;}
+
+\PYG{c+c1}{//Saving the initial image, to be overwritten by the for loops}
+\PYG{n}{gradX} \PYG{o}{=} \PYG{n}{src}\PYG{p}{.}\PYG{n}{clone}\PYG{p}{();}
+\PYG{n}{gradY} \PYG{o}{=} \PYG{n}{src}\PYG{p}{.}\PYG{n}{clone}\PYG{p}{();}
+\PYG{n}{gradF} \PYG{o}{=} \PYG{n}{src}\PYG{p}{.}\PYG{n}{clone}\PYG{p}{();}
+\end{Verbatim}

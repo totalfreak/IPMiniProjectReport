@@ -4,10 +4,10 @@
 		\PYG{k+kt}{int} \PYG{n}{scale} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
 		\PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{o}{\PYGZhy{}}\PYG{n}{radius}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}=} \PYG{n}{radius}\PYG{p}{;} \PYG{n}{i}\PYG{o}{++}\PYG{p}{)} \PYG{p}{\PYGZob{}}
 			\PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{j} \PYG{o}{=} \PYG{o}{\PYGZhy{}}\PYG{n}{radius}\PYG{p}{;} \PYG{n}{j} \PYG{o}{\PYGZlt{}=} \PYG{n}{radius}\PYG{p}{;} \PYG{n}{j}\PYG{o}{++}\PYG{p}{)} \PYG{p}{\PYGZob{}}
-			   \PYG{n}{scale} \PYG{o}{+=} \PYG{n}{src}\PYG{p}{.}\PYG{n}{at}\PYG{o}{\PYGZlt{}}\PYG{n}{uchar}\PYG{o}{\PYGZgt{}}\PYG{p}{(}\PYG{n}{row} \PYG{o}{+} \PYG{n}{i}\PYG{p}{,} \PYG{n}{col} \PYG{o}{+} \PYG{n}{j}\PYG{p}{)} \PYG{o}{*} \PYG{n}{kernelX}\PYG{p}{[}\PYG{n}{i} \PYG{o}{+} \PYG{n}{radius}\PYG{p}{][}\PYG{n}{j} \PYG{o}{+} \PYG{n}{radius}\PYG{p}{];}
+				\PYG{n}{scale} \PYG{o}{+=} \PYG{n}{src}\PYG{p}{.}\PYG{n}{at}\PYG{o}{\PYGZlt{}}\PYG{n}{uchar}\PYG{o}{\PYGZgt{}}\PYG{p}{(}\PYG{n}{row} \PYG{o}{+} \PYG{n}{i}\PYG{p}{,} \PYG{n}{col} \PYG{o}{+} \PYG{n}{j}\PYG{p}{)} \PYG{o}{*} \PYG{n}{kernelX}\PYG{p}{[}\PYG{n}{i} \PYG{o}{+} \PYG{n}{radius}\PYG{p}{][}\PYG{n}{j} \PYG{o}{+} \PYG{n}{radius}\PYG{p}{];}
 			\PYG{p}{\PYGZcb{}}
 		\PYG{p}{\PYGZcb{}}
-		\PYG{n}{gradX}\PYG{p}{.}\PYG{n}{at}\PYG{o}{\PYGZlt{}}\PYG{n}{uchar}\PYG{o}{\PYGZgt{}}\PYG{p}{(}\PYG{n}{row} \PYG{o}{\PYGZhy{}} \PYG{n}{radius}\PYG{p}{,} \PYG{n}{col} \PYG{o}{\PYGZhy{}} \PYG{n}{radius}\PYG{p}{)} \PYG{o}{=} \PYG{n}{scale} \PYG{o}{/} \PYG{l+m+mi}{60}\PYG{p}{;}
+		\PYG{n}{gradX}\PYG{p}{.}\PYG{n}{at}\PYG{o}{\PYGZlt{}}\PYG{n}{uchar}\PYG{o}{\PYGZgt{}}\PYG{p}{(}\PYG{n}{row} \PYG{o}{\PYGZhy{}} \PYG{n}{radius}\PYG{p}{,} \PYG{n}{col} \PYG{o}{\PYGZhy{}} \PYG{n}{radius}\PYG{p}{)} \PYG{o}{=} \PYG{n}{scale} \PYG{o}{/} \PYG{l+m+mi}{480}\PYG{n}{s}\PYG{p}{;}
 	\PYG{p}{\PYGZcb{}}
 \PYG{p}{\PYGZcb{}}
 \end{Verbatim}
